@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 3 - Bold & Dramatic</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Syne', sans-serif;
+      background: #0A0A0A;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 48px;
+      max-width: 560px;
+      width: 100%;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    .step {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #555;
+    }
+    .progress-pills {
+      display: flex;
+      gap: 6px;
+    }
+    .pill {
+      width: 24px;
+      height: 4px;
+      border-radius: 2px;
+      background: #222;
+    }
+    .pill.done { background: #C8FF00; }
+    .pill.active { background: #fff; }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 40px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+    .options { display: flex; flex-direction: column; gap: 12px; }
+    .option {
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 18px 22px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #888;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .option:hover { border-color: #444; color: #fff; }
+    .option.selected { border-color: #C8FF00; color: #C8FF00; background: rgba(200,255,0,0.05); }
+    .num {
+      font-size: 11px;
+      letter-spacing: 1px;
+      opacity: 0.5;
+      min-width: 16px;
+    }
+    .option.selected .num { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top-bar">
+      <span class="step">03 / 05</span>
+      <div class="progress-pills">
+        <div class="pill done"></div>
+        <div class="pill done"></div>
+        <div class="pill active"></div>
+        <div class="pill"></div>
+        <div class="pill"></div>
+      </div>
+    </div>
+    <h1>Saturday morning.<br>What's your move?</h1>
+    <div class="options">
+      <div class="option selected">
+        <span class="num">A</span>
+        Early run, then a green smoothie
+      </div>
+      <div class="option">
+        <span class="num">B</span>
+        Slow read with something warm
+      </div>
+      <div class="option">
+        <span class="num">C</span>
+        Whatever's easy — no planning required
+      </div>
+      <div class="option">
+        <span class="num">D</span>
+        Meditation and a quiet moment alone
+      </div>
+    </div>
+  </div>
+</body>
+</html>

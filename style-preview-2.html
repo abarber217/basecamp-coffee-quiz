@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 2 - Minimal & Clean</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAFAFA;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 56px;
+      max-width: 560px;
+      width: 100%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .progress-bar {
+      width: 100%;
+      height: 2px;
+      background: #F0F0F0;
+      border-radius: 2px;
+      margin-bottom: 48px;
+    }
+    .progress-fill {
+      width: 40%;
+      height: 100%;
+      background: #000;
+      border-radius: 2px;
+    }
+    .step {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #111;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option {
+      border: 1px solid #E8E8E8;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .option:hover { border-color: #000; }
+    .option.selected { border-color: #000; background: #000; color: white; }
+    .arrow { font-size: 12px; opacity: 0.4; }
+    .option.selected .arrow { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <div class="step">Question 3 of 5</div>
+    <h1>It's Saturday morning. What's your ideal start to the day?</h1>
+    <div class="options">
+      <div class="option selected">
+        Early run, then a green smoothie
+        <span class="arrow">→</span>
+      </div>
+      <div class="option">
+        Slow read with something warm
+        <span class="arrow">→</span>
+      </div>
+      <div class="option">
+        Whatever's easy — no planning required
+        <span class="arrow">→</span>
+      </div>
+      <div class="option">
+        Meditation and a quiet moment alone
+        <span class="arrow">→</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
